@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 
         if(next==-1) { 
             fprintf(stderr, "lseek error: %zu, %d, %s\n", next, errno, strerror(errno));
-            return 4;
+            break;
         }
 
         printf("%4s : %016ZX - %016ZX (%20zu bytes  %10.1f MB) \n", \
